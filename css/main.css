@@ -32,6 +32,8 @@ h3 {
 	font-weight: 600;
 	color: var(--primary-color);
 	font-size: 30px;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .btn {
@@ -42,6 +44,7 @@ h3 {
 	border: 1px solid var(--primary-color);
 	color: var(--primary-color);
 	transition: background .2s ease-in, color .2s ease-in, border .2s ease-in;
+	text-decoration: none;
 }
 
 .btn:hover {
@@ -74,6 +77,7 @@ h3 {
 .main-footer {
 	background: var(--primary-color);
 	color: #fff;
+	text-align: center;
 }
 
 /*************************
@@ -109,7 +113,7 @@ Main Header Styles
 Main Content Styles
 *************************/
 
-.main-content {
+.main-content .container {
 	display: flex;
 	flex-direction: column;
 }
@@ -131,13 +135,17 @@ Main Content Styles
 	margin-bottom: 1em;
 }
 
+.btn {
+	margin-top: auto;
+}
+
 /*************************
 Media Queries
 *************************/
 
 @media (min-width: 769px) {
 	.container {
-		width: 70%;
+		width: 80%;
 	}
 	.main-header .container {
 		display: flex;
@@ -149,13 +157,20 @@ Media Queries
 		flex-direction: row;
 		margin-top: 21.440px;
 	}
-	.main-content {
+	.main-content .container {
 		flex-direction: row;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 	.photo-card {
-		width: 30%;
+		width: 40%;
 		margin: 2em 0;
 		height: auto;
+	}
+}
+
+@media (min-width: 1025px) {
+	.photo-card {
+		width: 30%;
 	}
 }
