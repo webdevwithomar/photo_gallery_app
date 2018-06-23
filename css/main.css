@@ -1,0 +1,161 @@
+/*************************
+CSS Variables
+*************************/
+
+:root {
+	--primary-color: rgba(2, 119, 189, 1);
+	--secondary-color: rgba(3, 155, 229, 1);
+}
+
+/*************************
+Base Element Styles
+*************************/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font: 1em/1.4 'Open Sans', sans-serif;
+	color: #373737;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+}
+
+h2,
+h3 {
+	font-weight: 600;
+	color: var(--primary-color);
+	font-size: 30px;
+}
+
+.btn {
+	display: block;
+	padding: 8px;
+	width: 150px;
+	background: transparent;
+	border: 1px solid var(--primary-color);
+	color: var(--primary-color);
+	transition: background .2s ease-in, color .2s ease-in, border .2s ease-in;
+}
+
+.btn:hover {
+	background: var(--primary-color);
+	color: #fff;
+}
+
+.btn-full {
+	background: var(--primary-color);
+	color: #fff;
+}
+
+.btn-full:hover {
+	background: var(--secondary-color);
+	border: 1px solid var(--secondary-color);
+	color: #fff;
+}
+
+.btn-width {
+	width: 80%;
+}
+
+.main-header,
+.main-content,
+.main-footer {
+	padding: 20px 0;
+}
+
+.main-header,
+.main-footer {
+	background: var(--primary-color);
+	color: #fff;
+}
+
+/*************************
+Main Header Styles
+*************************/
+
+.main-heading a,
+.main-nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+}
+
+.main-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.main-nav ul li a {
+	margin-bottom: 10px;
+	padding: 10px;
+	transition: background 0.2s;
+}
+
+.main-nav ul li a:hover {
+	background: rgba(255,255,255,.5);
+}
+
+/*************************
+Main Content Styles
+*************************/
+
+.main-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.photo-card {
+	width: 100%;
+	margin: 2em 0;
+	height: auto;
+	overflow: hidden;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.photo {
+	width: 100%;
+	height: auto;
+	margin-bottom: 1em;
+}
+
+/*************************
+Media Queries
+*************************/
+
+@media (min-width: 769px) {
+	.container {
+		width: 70%;
+	}
+	.main-header .container {
+		display: flex;
+	}
+	.main-heading {
+		margin-right: auto;
+	}
+	.main-nav ul {
+		flex-direction: row;
+		margin-top: 21.440px;
+	}
+	.main-content {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.photo-card {
+		width: 30%;
+		margin: 2em 0;
+		height: auto;
+	}
+}
